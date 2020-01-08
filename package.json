@@ -1,23 +1,20 @@
 {
-  "name": "class-02",
+  "name": "file-reader",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "directories": {
-    "doc": "docs",
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest --verbose --coverage",
-    "lint": "eslint '**/*.js'",
-    "test-watch": "jest --watchAll --verbose --coverage",
-    "start": "node index.js",
-    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+    "lint": "eslint **/.js",
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --watchAll --coverage --verbose"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^24.9.0"
+    "eslint": "^5.6.1",
+    "jest": "^24.8.0"
   }
 }
