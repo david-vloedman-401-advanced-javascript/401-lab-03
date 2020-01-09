@@ -26,7 +26,6 @@ const read = (file, callback) => {
  * @param {function} callback 
  */
 const save = (data, fileName, rules, callback) => {
-
   if(validator.isValid(rules, data)){
     const buffer = Buffer.from(JSON.stringify(data));
 
@@ -37,7 +36,7 @@ const save = (data, fileName, rules, callback) => {
         callback(undefined);
       }
     });
-  } else { console.log('Is invalid')}
+  } else { console.log('Is invalid'); }
 };
 
 

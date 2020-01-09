@@ -1,3 +1,5 @@
+'use strict';
+
 const validator = require('./lib/validatorClass');
 const file = require('./edit-file');
 const util = require('util');
@@ -41,4 +43,3 @@ readfilePromise(directory).then(data => {
 
 
 
-console.log(directory);
