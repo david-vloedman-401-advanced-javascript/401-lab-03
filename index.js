@@ -21,18 +21,14 @@ const fileRules = {
     lastName: {
       type: 'string',
       required: true,
-    },   
-    hair: {
-      type: 'array',
-      valueType: 'string',
-    },
+    }, 
   },
 };
 
 readfilePromise(directory).then(data => {
 
   data.firstName = 'David';
-  data.lastName = 'Vanderbeek';
+  data.lastName = 'Potato';
   data.married = true;
   
   saveFilePromise(data, directory, fileRules).then(stuff => console.log('Success')).catch(err => {
