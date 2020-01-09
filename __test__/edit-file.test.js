@@ -36,30 +36,6 @@ describe('File Reader Module', () => {
     const badBuffer = 'this is a bad a buffer';
     const goodBuffer = new Buffer('this is a good buffer');
 
-    const firstRules = {
-      fields: {
-        firstName: {
-          type: 'string',
-          required: true,
-        },
-        lastName: {
-          type: 'string',
-          required: true,
-        },
-      },
-    };
-
-    const secondRules = {
-      fields: {
-        married: {
-          type: 'array',
-          required: true,
-        },
-        hair: {
-          type: 'object',          
-        },
-      },
-    };
 
     const rules = {};
 
@@ -289,20 +265,20 @@ const richard = {
 describe('validator module performs complex validations', () => {
   
     
-    it('Validates an object with a set of rules against an object', () => {
-      expect(validator.isValid(personRules, susan)).toBeTruthy();
-    });
-
-    it('validates an object with a set of rules against an object that does not pass', () => {
-      expect(validator.isValid(personRules, fred)).toBeFalsy();
-    });
-
-    it('does not validate rules against an empty object', () => {
-      expect(validator.isValid(personRules, ned)).toBeFalsy();
-    });
-
-    it('validates a value array against an approved list', () => {
-      expect(validator.isValid(arrayRules, richard)).toBeFalsy();
-    });
+  it('Validates an object with a set of rules against an object', () => {
+    expect(validator.isValid(personRules, susan)).toBeTruthy();
   });
+
+  it('validates an object with a set of rules against an object that does not pass', () => {
+    expect(validator.isValid(personRules, fred)).toBeFalsy();
+  });
+
+  it('does not validate rules against an empty object', () => {
+    expect(validator.isValid(personRules, ned)).toBeFalsy();
+  });
+
+  it('validates a value array against an approved list', () => {
+    expect(validator.isValid(arrayRules, richard)).toBeFalsy();
+  });
+});
 
